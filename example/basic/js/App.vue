@@ -21,8 +21,7 @@
 </template>
 
 <script>
-import VueForm from './vue-form/Form';
-import FormRegistry from './vue-form/Registry';
+import { VueForm, FormRegistry } from '../../../src/';
 import SwitchField from './custom/SwitchField';
 
 FormRegistry.registerCustomComponent('bootstrap', 'switch', SwitchField);

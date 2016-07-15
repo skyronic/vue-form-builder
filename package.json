@@ -2,18 +2,17 @@
   "name": "vue-form-builder",
   "description": "Vue Form Builder",
   "author": "Anirudh Sanjeev <skyronic@gmail.com>",
-  "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "webpack-dev-server --inline --hot --config config/webpack.dev.conf.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config config/webpack.build.conf.js"
   },
   "dependencies": {
-    "babel-plugin-syntax-jsx": "^6.8.0",
-    "bootstrap": "^3.3.6",
     "validate.js": "^0.10.0",
     "vue": "^2.0.0-alpha.2"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "babel-plugin-syntax-jsx": "^6.8.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-vue-jsx": "^1.0.1",

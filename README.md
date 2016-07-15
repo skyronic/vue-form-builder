@@ -1,21 +1,12 @@
 # vue-form-builder
-## Form builder library
+
+## Form builder library using VueJS 2 Virtual Dom
 
 ### Features
 
 * Build a full form using a JavaScript object. No fiddling with HTML
 * Extremely flexible, add new components or modify existing ones with ease
 * Pluggable validation. Use joi validation library or write a wrapper for your own.
-
-### TODO:
-
-- [ ] Extract proof of concept into re-usable library
-- [ ] Support multiple templates (bootstrap/foundation/etc)
-
-* Validaton
-** async validation
-** realtime validation
-** validation on submit
 
 ### Usage
 
@@ -67,7 +58,7 @@ You can easily add a custom component like this:
 
 ```
 // Import the form registry
-import FormRegistry from 'vue-form-builder/Registry';
+import {VueForm, FormRegistry} from 'vue-form-builder';
 
 // Register the component
 FormRegistry.registerCustomComponent('bootstrap', // template name
@@ -96,10 +87,4 @@ In your schema:
 
 ## Validation
 
-The library doesn't do direct validation but rather uses a pluggable external library to handle validation.
 
-### Validation on submit
-
-### Real-time validation
-
-### Async validation

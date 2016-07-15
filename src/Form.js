@@ -19,7 +19,6 @@ export default Vue.extend ({
       if (!this.validation) {
         return null;
       }
-      console.log ("running validations");
       var values = this.model;
       var constraints = this.validation.constraints;
       var validator = Registry.getValidator ('default');
@@ -43,7 +42,6 @@ export default Vue.extend ({
     };
     var submitButton = template.buttons.submit (h, submitButtonClicked)
     var validationResults = this.runValidation ();
-    console.log ("Validation results", validationResults);
 
     var formItems = this.fields.map((field) => {
       var setValue = null;

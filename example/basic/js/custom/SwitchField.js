@@ -1,4 +1,4 @@
-import Bootstrap from '../vue-form/templates/BootstrapTemplate'
+import Bootstrap from '../../../../src/templates/BootstrapTemplate'
 
 export default function (h, field, value, onUpdate) {
   var changeValue = () => {
