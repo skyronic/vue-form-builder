@@ -1,6 +1,7 @@
 {
   "name": "vue-form-builder",
   "description": "Vue Form Builder",
+  "version": "0.0.1",
   "author": "Anirudh Sanjeev <skyronic@gmail.com>",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --config config/webpack.dev.conf.js",
@@ -10,6 +11,7 @@
   "dependencies": {
     "validate.js": "^0.10.0"
   },
+  "repository": "skyronic/vue-form-builder",
   "main": "src/index.js",
   "devDependencies": {
     "vue": "^2.0.0-alpha.2",
