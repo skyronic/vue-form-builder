@@ -2,7 +2,7 @@
   <div id="app">
     <h2>Form:</h2>
     <vue-form 
-      :fields="myFormFields"
+      :schema="myFormSchema"
       :options="myFormOptions"
       :model.sync="myModel"
       @submit="onFormSubmitted"
@@ -12,24 +12,21 @@
       <pre>
 {{ myModel }}
       </pre>
-      <h2>Fields</h2>
+      <h2>Schema:</h2>
       <pre>
-{{ myFormFields }}
+{{ myFormSchema }}
       </pre>
 
     </div>
 </template>
 
 <script>
-import { VueForm, FormRegistry } from '../../../src/';
+import { FormRegistry } from '../../../src/';
 import SwitchField from './custom/SwitchField';
 
 FormRegistry.registerCustomComponent('bootstrap', 'switch', SwitchField);
 
 export default {
-  components: {
-    VueForm
-  },
   methods: {
     onFormSubmitted () {
       alert ("Form is submitted: " + JSON.stringify(this.myModel))
@@ -59,7 +56,7 @@ export default {
           subscribed: {}
         }
       },
-      myFormFields: [
+      myFormSchema: [
         {key: 'name', label: "Name", type: "text"},
         {key: 'address', label: "Address", type: "textarea"},
         {key: 'subscribed', label: "Subscribed", type: "switch"},

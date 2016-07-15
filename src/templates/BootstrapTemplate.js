@@ -1,10 +1,3 @@
-import Vue from 'vue';
-
-
-var util = {
-
-}
-
 var bootstrap  = {
   renderForm (h, formState, config, items) {
     return (<div>

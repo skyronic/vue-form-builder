@@ -6,11 +6,13 @@
     "dev": "webpack-dev-server --inline --hot --config config/webpack.dev.conf.js",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config config/webpack.build.conf.js"
   },
+  "license": "MIT",
   "dependencies": {
-    "validate.js": "^0.10.0",
-    "vue": "^2.0.0-alpha.2"
+    "validate.js": "^0.10.0"
   },
+  "main": "src/index.js",
   "devDependencies": {
+    "vue": "^2.0.0-alpha.2",
     "bootstrap": "^3.3.6",
     "babel-plugin-syntax-jsx": "^6.8.0",
     "babel-core": "^6.0.0",
