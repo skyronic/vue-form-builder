@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "babel-plugin-syntax-jsx": "^6.8.0",
+    "bootstrap": "^3.3.6",
+    "validate.js": "^0.10.0",
     "vue": "^2.0.0-alpha.2"
   },
   "devDependencies": {

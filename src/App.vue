@@ -6,6 +6,7 @@
       :options="myFormOptions"
       :model.sync="myModel"
       @submit="onFormSubmitted"
+      :validation="myValidation"
       id="myCoolForm" />
       <h2>Model:</h2>
       <pre>
@@ -21,6 +22,10 @@
 
 <script>
 import VueForm from './vue-form/Form';
+import FormRegistry from './vue-form/Registry';
+import SwitchField from './custom/SwitchField';
+
+FormRegistry.registerCustomComponent('bootstrap', 'switch', SwitchField);
 
 export default {
   components: {
@@ -34,15 +39,31 @@ export default {
   data () {
     return {
       myFormOptions: {
-        name: "My Form"
+        name: "My Form",
+        template: 'bootstrap'
       },
       myModel: {
-        name: "Anirudh",
-        address: ""
+        name: "",
+        address: "",
+        subscribed: false
+      },
+      myValidation: {
+        constraints: {
+          name: {
+            presence: true,
+            length: {minimum: 3}
+          },
+          address: {
+            presence: true,
+            length: {maximum: 5}
+          },
+          subscribed: {}
+        }
       },
       myFormFields: [
         {key: 'name', label: "Name", type: "text"},
-        {key: 'address', label: "Address", type: "text"},
+        {key: 'address', label: "Address", type: "textarea"},
+        {key: 'subscribed', label: "Subscribed", type: "switch"},
       ]
     }
   }
